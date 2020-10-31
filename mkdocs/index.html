@@ -48,10 +48,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -387,24 +389,34 @@
 15
 16
 17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>site_name: MkDocs Sample
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>site_name: MkDocs Sample
 nav:
     - Home: index.md
+    - Python: python.md
     - MkDocs: mkdocs.md
     - About: about.md
 theme:
-    material
+    name: material
+    palette:
+        - scheme: default
+          primary: pink
+          accent: pink
 markdown_extensions:
     - attr_list
     - pymdownx.highlight:
         linenums: true
     - pymdownx.superfences
 extra_javascript:
-  - js/highlight.min.js
-  - js/config.js
+    - js/highlight.min.js
+    - js/config.js
 extra_css:
-  - css/main.css
-  - css/vs.min.css
+    - css/main.css
+    - css/vs.min.css
 </code></pre></div>
 </td></tr></table>
 <h3 id="configjs">config.js</h3>
