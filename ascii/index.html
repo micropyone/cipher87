@@ -1,0 +1,1166 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>ASCII 編碼 - 古典密碼</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/main.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ascii" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="古典密碼" class="md-header-nav__button md-logo" aria-label="古典密碼">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            古典密碼
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              ASCII 編碼
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="古典密碼" class="md-nav__button md-logo" aria-label="古典密碼">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    古典密碼
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/" class="md-nav__link">
+        MkDocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        Python 基礎
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ASCII 編碼
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ASCII 編碼
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    參考資源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    進位轉換
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ascii_1" class="md-nav__link">
+    ASCII 可顯示字元
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    可顯示字元建表程式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    大小寫字母
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ascii_2" class="md-nav__link">
+    查詢字元 ASCII 值
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caesar/" class="md-nav__link">
+        凱撒密碼
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vigenere/" class="md-nav__link">
+        維吉尼亞密碼
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        關於本站
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    參考資源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    進位轉換
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ascii_1" class="md-nav__link">
+    ASCII 可顯示字元
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    可顯示字元建表程式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    大小寫字母
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ascii_2" class="md-nav__link">
+    查詢字元 ASCII 值
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ascii">ASCII 編碼</h1>
+<h2 id="_1">參考資源</h2>
+<blockquote>
+<p>ASCII (American Standard Code for Information Interchange，美國資訊交換標準代碼) 是基於拉丁字母的一套電腦編碼系統。它主要用於顯示現代英語。</p>
+<p><strong>維基百科</strong></p>
+</blockquote>
+<h2 id="_2">進位轉換</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;n: &#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n 的  2 進位 </span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n 的  8 進位 </span><span class="si">{</span><span class="nb">oct</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n 的 16 進位 </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="ascii_1">ASCII 可顯示字元</h2>
+<table>
+<thead>
+<tr>
+<th>BIN</th>
+<th>HEX</th>
+<th>DEC</th>
+<th>CHAR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100000</td>
+<td>20</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>100001</td>
+<td>21</td>
+<td>33</td>
+<td>!</td>
+</tr>
+<tr>
+<td>100010</td>
+<td>22</td>
+<td>34</td>
+<td>"</td>
+</tr>
+<tr>
+<td>100011</td>
+<td>23</td>
+<td>35</td>
+<td>#</td>
+</tr>
+<tr>
+<td>100100</td>
+<td>24</td>
+<td>36</td>
+<td>$</td>
+</tr>
+<tr>
+<td>100101</td>
+<td>25</td>
+<td>37</td>
+<td>%</td>
+</tr>
+<tr>
+<td>100110</td>
+<td>26</td>
+<td>38</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>100111</td>
+<td>27</td>
+<td>39</td>
+<td>'</td>
+</tr>
+<tr>
+<td>101000</td>
+<td>28</td>
+<td>40</td>
+<td>(</td>
+</tr>
+<tr>
+<td>101001</td>
+<td>29</td>
+<td>41</td>
+<td>)</td>
+</tr>
+<tr>
+<td>101010</td>
+<td>2A</td>
+<td>42</td>
+<td>*</td>
+</tr>
+<tr>
+<td>101011</td>
+<td>2B</td>
+<td>43</td>
+<td>+</td>
+</tr>
+<tr>
+<td>101100</td>
+<td>2C</td>
+<td>44</td>
+<td>,</td>
+</tr>
+<tr>
+<td>101101</td>
+<td>2D</td>
+<td>45</td>
+<td>-</td>
+</tr>
+<tr>
+<td>101110</td>
+<td>2E</td>
+<td>46</td>
+<td>.</td>
+</tr>
+<tr>
+<td>101111</td>
+<td>2F</td>
+<td>47</td>
+<td>/</td>
+</tr>
+<tr>
+<td>110000</td>
+<td>30</td>
+<td>48</td>
+<td>0</td>
+</tr>
+<tr>
+<td>110001</td>
+<td>31</td>
+<td>49</td>
+<td>1</td>
+</tr>
+<tr>
+<td>110010</td>
+<td>32</td>
+<td>50</td>
+<td>2</td>
+</tr>
+<tr>
+<td>110011</td>
+<td>33</td>
+<td>51</td>
+<td>3</td>
+</tr>
+<tr>
+<td>110100</td>
+<td>34</td>
+<td>52</td>
+<td>4</td>
+</tr>
+<tr>
+<td>110101</td>
+<td>35</td>
+<td>53</td>
+<td>5</td>
+</tr>
+<tr>
+<td>110110</td>
+<td>36</td>
+<td>54</td>
+<td>6</td>
+</tr>
+<tr>
+<td>110111</td>
+<td>37</td>
+<td>55</td>
+<td>7</td>
+</tr>
+<tr>
+<td>111000</td>
+<td>38</td>
+<td>56</td>
+<td>8</td>
+</tr>
+<tr>
+<td>111001</td>
+<td>39</td>
+<td>57</td>
+<td>9</td>
+</tr>
+<tr>
+<td>111010</td>
+<td>3A</td>
+<td>58</td>
+<td>:</td>
+</tr>
+<tr>
+<td>111011</td>
+<td>3B</td>
+<td>59</td>
+<td>;</td>
+</tr>
+<tr>
+<td>111100</td>
+<td>3C</td>
+<td>60</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>111101</td>
+<td>3D</td>
+<td>61</td>
+<td>=</td>
+</tr>
+<tr>
+<td>111110</td>
+<td>3E</td>
+<td>62</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>111111</td>
+<td>3F</td>
+<td>63</td>
+<td>?</td>
+</tr>
+<tr>
+<td>1000000</td>
+<td>40</td>
+<td>64</td>
+<td>@</td>
+</tr>
+<tr>
+<td>1000001</td>
+<td>41</td>
+<td>65</td>
+<td>A</td>
+</tr>
+<tr>
+<td>1000010</td>
+<td>42</td>
+<td>66</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1000011</td>
+<td>43</td>
+<td>67</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1000100</td>
+<td>44</td>
+<td>68</td>
+<td>D</td>
+</tr>
+<tr>
+<td>1000101</td>
+<td>45</td>
+<td>69</td>
+<td>E</td>
+</tr>
+<tr>
+<td>1000110</td>
+<td>46</td>
+<td>70</td>
+<td>F</td>
+</tr>
+<tr>
+<td>1000111</td>
+<td>47</td>
+<td>71</td>
+<td>G</td>
+</tr>
+<tr>
+<td>1001000</td>
+<td>48</td>
+<td>72</td>
+<td>H</td>
+</tr>
+<tr>
+<td>1001001</td>
+<td>49</td>
+<td>73</td>
+<td>I</td>
+</tr>
+<tr>
+<td>1001010</td>
+<td>4A</td>
+<td>74</td>
+<td>J</td>
+</tr>
+<tr>
+<td>1001011</td>
+<td>4B</td>
+<td>75</td>
+<td>K</td>
+</tr>
+<tr>
+<td>1001100</td>
+<td>4C</td>
+<td>76</td>
+<td>L</td>
+</tr>
+<tr>
+<td>1001101</td>
+<td>4D</td>
+<td>77</td>
+<td>M</td>
+</tr>
+<tr>
+<td>1001110</td>
+<td>4E</td>
+<td>78</td>
+<td>N</td>
+</tr>
+<tr>
+<td>1001111</td>
+<td>4F</td>
+<td>79</td>
+<td>O</td>
+</tr>
+<tr>
+<td>1010000</td>
+<td>50</td>
+<td>80</td>
+<td>P</td>
+</tr>
+<tr>
+<td>1010001</td>
+<td>51</td>
+<td>81</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>1010010</td>
+<td>52</td>
+<td>82</td>
+<td>R</td>
+</tr>
+<tr>
+<td>1010011</td>
+<td>53</td>
+<td>83</td>
+<td>S</td>
+</tr>
+<tr>
+<td>1010100</td>
+<td>54</td>
+<td>84</td>
+<td>T</td>
+</tr>
+<tr>
+<td>1010101</td>
+<td>55</td>
+<td>85</td>
+<td>U</td>
+</tr>
+<tr>
+<td>1010110</td>
+<td>56</td>
+<td>86</td>
+<td>V</td>
+</tr>
+<tr>
+<td>1010111</td>
+<td>57</td>
+<td>87</td>
+<td>W</td>
+</tr>
+<tr>
+<td>1011000</td>
+<td>58</td>
+<td>88</td>
+<td>X</td>
+</tr>
+<tr>
+<td>1011001</td>
+<td>59</td>
+<td>89</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>1011010</td>
+<td>5A</td>
+<td>90</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>1011011</td>
+<td>5B</td>
+<td>91</td>
+<td>[</td>
+</tr>
+<tr>
+<td>1011100</td>
+<td>5C</td>
+<td>92</td>
+<td>\</td>
+</tr>
+<tr>
+<td>1011101</td>
+<td>5D</td>
+<td>93</td>
+<td>]</td>
+</tr>
+<tr>
+<td>1011110</td>
+<td>5E</td>
+<td>94</td>
+<td>^</td>
+</tr>
+<tr>
+<td>1011111</td>
+<td>5F</td>
+<td>95</td>
+<td>_</td>
+</tr>
+<tr>
+<td>1100000</td>
+<td>60</td>
+<td>96</td>
+<td>`</td>
+</tr>
+<tr>
+<td>1100001</td>
+<td>61</td>
+<td>97</td>
+<td>a</td>
+</tr>
+<tr>
+<td>1100010</td>
+<td>62</td>
+<td>98</td>
+<td>b</td>
+</tr>
+<tr>
+<td>1100011</td>
+<td>63</td>
+<td>99</td>
+<td>c</td>
+</tr>
+<tr>
+<td>1100100</td>
+<td>64</td>
+<td>100</td>
+<td>d</td>
+</tr>
+<tr>
+<td>1100101</td>
+<td>65</td>
+<td>101</td>
+<td>e</td>
+</tr>
+<tr>
+<td>1100110</td>
+<td>66</td>
+<td>102</td>
+<td>f</td>
+</tr>
+<tr>
+<td>1100111</td>
+<td>67</td>
+<td>103</td>
+<td>g</td>
+</tr>
+<tr>
+<td>1101000</td>
+<td>68</td>
+<td>104</td>
+<td>h</td>
+</tr>
+<tr>
+<td>1101001</td>
+<td>69</td>
+<td>105</td>
+<td>i</td>
+</tr>
+<tr>
+<td>1101010</td>
+<td>6A</td>
+<td>106</td>
+<td>j</td>
+</tr>
+<tr>
+<td>1101011</td>
+<td>6B</td>
+<td>107</td>
+<td>k</td>
+</tr>
+<tr>
+<td>1101100</td>
+<td>6C</td>
+<td>108</td>
+<td>l</td>
+</tr>
+<tr>
+<td>1101101</td>
+<td>6D</td>
+<td>109</td>
+<td>m</td>
+</tr>
+<tr>
+<td>1101110</td>
+<td>6E</td>
+<td>110</td>
+<td>n</td>
+</tr>
+<tr>
+<td>1101111</td>
+<td>6F</td>
+<td>111</td>
+<td>o</td>
+</tr>
+<tr>
+<td>1110000</td>
+<td>70</td>
+<td>112</td>
+<td>p</td>
+</tr>
+<tr>
+<td>1110001</td>
+<td>71</td>
+<td>113</td>
+<td>q</td>
+</tr>
+<tr>
+<td>1110010</td>
+<td>72</td>
+<td>114</td>
+<td>r</td>
+</tr>
+<tr>
+<td>1110011</td>
+<td>73</td>
+<td>115</td>
+<td>s</td>
+</tr>
+<tr>
+<td>1110100</td>
+<td>74</td>
+<td>116</td>
+<td>t</td>
+</tr>
+<tr>
+<td>1110101</td>
+<td>75</td>
+<td>117</td>
+<td>u</td>
+</tr>
+<tr>
+<td>1110110</td>
+<td>76</td>
+<td>118</td>
+<td>v</td>
+</tr>
+<tr>
+<td>1110111</td>
+<td>77</td>
+<td>119</td>
+<td>w</td>
+</tr>
+<tr>
+<td>1111000</td>
+<td>78</td>
+<td>120</td>
+<td>x</td>
+</tr>
+<tr>
+<td>1111001</td>
+<td>79</td>
+<td>121</td>
+<td>y</td>
+</tr>
+<tr>
+<td>1111010</td>
+<td>7A</td>
+<td>122</td>
+<td>z</td>
+</tr>
+<tr>
+<td>1111011</td>
+<td>7B</td>
+<td>123</td>
+<td>{</td>
+</tr>
+<tr>
+<td>1111100</td>
+<td>7C</td>
+<td>124</td>
+<td></td>
+</tr>
+<tr>
+<td>1111101</td>
+<td>7D</td>
+<td>125</td>
+<td>}</td>
+</tr>
+<tr>
+<td>1111110</td>
+<td>7E</td>
+<td>126</td>
+<td>~</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">可顯示字元建表程式</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="s1">&#39;BIN&#39;</span><span class="si">:</span><span class="s2">^9</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;HEX&#39;</span><span class="si">:</span><span class="s2">^5</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;DEC&#39;</span><span class="si">:</span><span class="s2">^5</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;CHAR&#39;</span><span class="si">:</span><span class="s2">^6</span><span class="si">}</span><span class="s2">|&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">9</span><span class="si">:</span><span class="s2">^9</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">5</span><span class="si">:</span><span class="s2">^5</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">5</span><span class="si">:</span><span class="s2">^5</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">6</span><span class="si">:</span><span class="s2">^6</span><span class="si">}</span><span class="s2">|&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">127</span><span class="p">):</span>
+    <span class="n">bb</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">hh</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">i</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="n">cc</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="n">bb</span><span class="si">:</span><span class="s2">^9</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">hh</span><span class="si">:</span><span class="s2">^5</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">^5</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">cc</span><span class="si">:</span><span class="s2">^6</span><span class="si">}</span><span class="s2">|&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_4">大小寫字母</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 存取大寫字母</span>
+<span class="n">alist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># 存取小寫字母</span>
+<span class="n">blist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">91</span><span class="p">):</span>
+    <span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="c1"># 小寫的 ASCII 值與大寫相差 32</span>
+    <span class="n">blist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">32</span><span class="p">))</span>
+<span class="c1"># 使用 str.join() 方法合併字母為一個字串</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">alist</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">blist</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="ascii_2">查詢字元 ASCII 值</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">astr</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;輸入一個字串 (q 表示離開): &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">astr</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">astr</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1"> -&gt; </span><span class="si">{</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../basic/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Python 基礎
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../caesar/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                凱撒密碼
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/highlight.min.js"></script>
+      
+        <script src="../js/config.js"></script>
+      
+    
+  </body>
+</html>

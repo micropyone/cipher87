@@ -14,7 +14,7 @@
     
     
       
-        <title>關於本站 - 古典密碼</title>
+        <title>凱撒密碼 - 古典密碼</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#caesar-cipher" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              關於本站
+              凱撒密碼
             
           </span>
         </div>
@@ -232,11 +232,63 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../caesar/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          凱撒密碼
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         凱撒密碼
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    參考資源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    加密一個字串
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    偏移量換算對照表
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -262,63 +314,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          關於本站
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
         關於本站
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    作者簡介
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    設計動機
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    電影推薦
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -348,22 +348,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    參考資源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    作者簡介
+    加密一個字串
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    設計動機
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    電影推薦
+    偏移量換算對照表
   </a>
   
 </li>
@@ -381,22 +381,58 @@
               
                 
                 
-                <h1 id="_1">關於本站</h1>
-<h2 id="_2">作者簡介</h2>
+                <h1 id="caesar-cipher">Caesar Cipher (凱撒密碼)</h1>
+<h2 id="_1">參考資源</h2>
 <blockquote>
-<p>Bug 老師</p>
+<p>凱撒密碼是一種替換加密技術，明文中的所有字母都在字母表上向後（或向前）按照一個固定數目進行偏移後被替換成密文。例如，當偏移量是 3 的時候，所有的字母 A 將被替換成 D ， B 變成 E ，以此類推。這個加密方法是以羅馬共和時期凱撒的名字命名的，據稱當年凱撒曾用此方法與其將軍們進行聯繫。</p>
+<p><strong>維基百科</strong></p>
 </blockquote>
-<h2 id="_3">設計動機</h2>
-<blockquote>
-<p>此專題是老師製作，提供給中級班同學作為專題設計與開發參考。期待同學們的作品能夠做得比老師還要豐富</p>
-</blockquote>
-<h2 id="_4">電影推薦</h2>
-<ul>
-<li><a href="https://www.warnerbros.co.uk/movies/interstellar" target="_blank">Interstellar (星際效應)</a></li>
-<li><a href="https://www.imdb.com/title/tt2084970/" target="_blank">The Imitation Game (模仿遊戲)</a></li>
-<li><a href="https://www.20thcenturystudios.com/movies/the-martian" target="_blank">The Martian (絕地救援)</a></li>
-<li><a href="https://family.20thcenturystudios.com/movies/hidden-figures" target="_blank">Hidden Figures (關鍵少數)</a></li>
-</ul>
+<h2 id="_2">加密一個字串</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># 可用於解密</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">astr</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;輸入一個明文字串 (q 表示離開): &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">astr</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">akey</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;偏移量: &#39;</span><span class="p">))</span>
+    <span class="n">alist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">astr</span><span class="p">:</span>
+        <span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="n">akey</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;密文:&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">alist</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_3">偏移量換算對照表</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">alpha</span> <span class="o">=</span> <span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">91</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|##|</span><span class="si">{</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span><span class="s2">|&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|--|</span><span class="si">{</span><span class="s1">&#39;-|&#39;</span><span class="o">*</span><span class="mi">26</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
+    <span class="n">alist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
+        <span class="n">nidx</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">k</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span>
+        <span class="n">newc</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="n">nidx</span><span class="p">]</span>
+        <span class="n">alist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newc</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="n">k</span><span class="si">:</span><span class="s2">2</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span><span class="si">}</span><span class="s2">|&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
@@ -415,7 +451,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../vigenere/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ascii/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -424,11 +460,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                維吉尼亞密碼
+                ASCII 編碼
               </div>
             </div>
           </a>
         
+        
+          <a href="../vigenere/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                維吉尼亞密碼
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
