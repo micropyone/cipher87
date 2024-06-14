@@ -1,3 +1,8 @@
+body * {
+    font-size: 18px;
+    font-family: Consolas;
+}
+
 h1 {
     color: #546d78 !important;
     font-size: 28px !important;
