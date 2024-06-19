@@ -20,3 +20,30 @@ h3 {
     font-size: 18px !important;
     font-weight: bold !important;
 }
+
+em {
+    color: #d4362b;
+    font-style: normal;
+}
+
+.linenos,
+pre code {
+    font-size: 18px !important;
+}
+
+.linenodiv * {
+    font-size: 18px !important;
+}
+
+p,
+li {
+    font-size: 18px !important;
+}
+
+li code {
+    font-size: 18px !important;
+}
+
+table * {
+    font-size: 18px !important;
+}
