@@ -792,7 +792,8 @@
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="c1"># 從 0 ~ 9999 隨機(亂數) 挑選一個整數</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
@@ -800,7 +801,8 @@
 
 <span class="c1"># 無條件進入 while 迴圈</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;請從 0 ~ 9999 中猜一個整數 (-1 表示放棄): &#39;</span><span class="p">))</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="s1">&#39;從 0 ~ 9999 猜 1 個整數 (-1 表示放棄): &#39;</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
         <span class="c1"># break 表示立即離開迴圈</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;尚未答對就放棄!&#39;</span><span class="p">)</span>
